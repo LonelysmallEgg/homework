@@ -1,0 +1,456 @@
+:root {
+    --bg-primary: #0b0d17;
+    --bg-card: rgba(22, 27, 46, 0.85);
+    --bg-card-hover: rgba(30, 38, 66, 0.95);
+    --accent-pink: #ff4081;
+    --accent-cyan: #00e5ff;
+    --accent-blue: #3d5afe;
+    --accent-gold: #ffd700;
+    --text-main: #f0f4f9;
+    --text-sub: #a0aec0;
+    --border-glass: rgba(255, 255, 255, 0.12);
+    --border-cyan: rgba(0, 229, 255, 0.4);
+    --shadow-glow: 0 0 25px rgba(0, 229, 255, 0.25);
+    --font-main: 'Noto Sans TC', sans-serif;
+    --font-tech: 'Rajdhani', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image:
+        radial-gradient(circle at 15% 20%, rgba(255, 64, 129, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(0, 229, 255, 0.08) 0%, transparent 40%),
+        linear-gradient(to bottom, #070810, #0d1021);
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header 導覽列 UI 樣式 */
+.site-header {
+    position: relative;
+    background: rgba(11, 13, 23, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-glass);
+    padding: 0 5%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.site-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-tech);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.site-logo-icon {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, var(--accent-pink), var(--accent-cyan));
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-link {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text-sub);
+    position: relative;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-pink));
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-glass);
+    padding: 9px 16px 9px 38px;
+    border-radius: 20px;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 180px;
+}
+
+.search-input:focus {
+    width: 230px;
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-sub);
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
+.user-account-btn {
+    background: linear-gradient(135deg, rgba(61, 90, 254, 0.3), rgba(255, 64, 129, 0.3));
+    border: 1px solid rgba(0, 229, 255, 0.5);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-account-btn:hover {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.5);
+    transform: translateY(-2px);
+}
+
+/* 內容定位區塊與淡入動畫 */
+.page-container {
+    display: none;
+    min-height: calc(100vh - 160px);
+    padding: 60px 5%;
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+.page-container.active {
+    display: block;
+    flex-grow: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer 頁尾 UI 樣式 */
+.site-footer {
+    background: rgba(7, 8, 16, 0.95);
+    border-top: 1px solid var(--border-glass);
+    padding: 40px 5%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-sub);
+    margin-top: auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--text-sub);
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: var(--accent-cyan);
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.6);
+}
+
+/* ==========================================================================
+   媒體報導專屬元件 UI 樣式
+   ========================================================================== */
+.press-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.press-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.press-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.press-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent-cyan);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-5px);
+}
+
+.press-thumb {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #161b2e, #252d4a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-tech);
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--border-glass);
+}
+
+.press-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.press-date {
+    font-family: var(--font-tech);
+    font-size: 0.9rem;
+    color: var(--accent-pink);
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.press-headline {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.press-summary {
+    color: var(--text-sub);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.read-more-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(61, 90, 254, 0.2), rgba(255, 64, 129, 0.2));
+    border: 1px solid var(--accent-cyan);
+    color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.4);
+}
+
+/* ==========================================================================
+   聯繫我們專屬表單 UI 樣式
+   ========================================================================== */
+.contact-inner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    padding: 40px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-label {
+    display: block;
+    font-family: var(--font-tech);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--accent-cyan);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-glass);
+    border-radius: 6px;
+    padding: 12px 16px;
+    color: var(--text-main);
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-textarea {
+    height: 150px;
+    resize: none;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: var(--accent-pink);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.3);
+}
+
+.submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
+    border: none;
+    color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--font-tech);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    box-shadow: 0 0 25px rgba(255, 64, 129, 0.6);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   獨立分頁共通主標題樣式
+   ========================================================================== */
+.page-title {
+    font-family: var(--font-tech);
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 50px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-pink));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+}
+
+.press-thumb {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #161b2e, #252d4a);
+    border-bottom: 1px solid var(--border-glass);
+    overflow: hidden; /* 確保超出的圖片不會突出來 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.press-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 關鍵設定：確保圖片滿版且依比例縮放不變形 */
+    object-position: center; /* 讓圖片的中心點保持對齊 */
+    transition: transform 0.5s ease; /* 為滑鼠懸停圖片放大特效鋪路 */
+}
+
+/* 當滑鼠移到卡片上時，圖片會有些微精緻的放大動效 */
+.press-card:hover .press-thumb img {
+    transform: scale(1.05);
+}

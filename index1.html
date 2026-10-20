@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日系遊戲官網 - 最新消息</title>
+    <!-- 引入全域樣式與內文專屬樣式 -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="story.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="site-logo">
+            <div class="site-logo-icon">G</div>
+            <span>PROJECT</span>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link" id="nav-index">首頁</a>
+            <a href="games.html" class="nav-link" id="nav-games">遊戲</a>
+            <a href="news.html" class="nav-link" id="nav-news">最新消息</a>
+            <a href="help.html" class="nav-link" id="nav-help">幫助</a>
+        </nav>
+
+        <div class="header-right">
+            <form class="search-box" action="search.html" method="GET">
+                <span class="search-icon">🔍</span>
+                <input type="text" name="q" class="search-input" placeholder="搜尋位置...">
+            </form>
+            <button class="user-account-btn" onclick="window.location.href='login.html'">
+                <span>👤</span> 帳號登入
+            </button>
+        </div>
+    </header>
+
+    <main class="page-container active">
+        <div class="article-detail-container">
+            <a href="index.html" class="back-to-list-btn">➔ 返回首頁 BACK TO HOME</a>
+            <div class="detail-meta">2026.10.05 // SYSTEM UPDATE // ANNOUNCEMENT</div>
+            <h1 class="detail-title">Ver 4.5「星光之誓」版本維護修正公告</h1>
+            <div class="detail-main-img"><img src="index1.jpg" alt="Update Detailed"></div>
+            <div class="detail-content">
+                <p>親愛的冒險者您好：</p>
+                <p>本週大規模系統更新與資料庫重組維護工作已全數安全完成，全新 4.5 版本「星空下的誓言」正式實裝上線！本次更新全面升級了伺服器渲染引擎的底層通訊包結構，能大幅降低多人在線副本下的粒子動效卡頓現象。</p>
+                <p>在角色生態方面，研發團隊針對多位前線作戰英靈的平衡性進行了精密修正與技能調整，提升了部分防禦型職業的能量恢復速率。同時，全新限時秋日祭典節慶主題地圖也已全面解鎖，冒險者們即刻登入即可前往探索全新的神祕篇章。</p>
+                <p>感謝各位冒險者對 PROJECT 的支持與配合，祝您冒險愉快！</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="/jobchance.html" onclick="switchPage('jobchance')">工作機會</a>
+            <a href="/story.html" onclick="switchPage('story')">媒體報導</a>
+            <a href="/connect.html" onclick="switchPage('connect')">聯繫我們</a>
+            <a href="/help.html" onclick="switchPage('help')">客服支援</a>
+            <a href="/about.html" onclick="switchPage('about')">關於我們</a>
+        </div>
+        <p>© 2026 AETHERIA GAME STUDIO. ALL RIGHTS RESERVED. 本網站為個人二次元遊戲作品展示網頁範例。</p>
+    </footer>
+
+</body>
+
+</html>

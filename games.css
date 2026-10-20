@@ -1,0 +1,124 @@
+/* ==========================================================================
+   遊戲作品列表專屬元件 UI 樣式
+   ========================================================================== */
+.games-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 35px;
+}
+
+.game-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.game-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent-cyan);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-5px);
+}
+
+.game-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(135deg, var(--accent-pink), var(--accent-blue));
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-family: var(--font-tech);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    z-index: 10;
+    text-transform: uppercase;
+}
+
+.game-badge.classic {
+    background: linear-gradient(135deg, var(--accent-gold), #ff8f00);
+    color: #000;
+}
+
+.game-cover-container {
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(135deg, #121626, #1e2540);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-tech);
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-bottom: 1px solid var(--border-glass);
+}
+
+.game-cover-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-type {
+    font-family: var(--font-tech);
+    font-size: 0.9rem;
+    color: var(--accent-cyan);
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.game-title-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.game-description {
+    color: var(--text-sub);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.game-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(61, 90, 254, 0.2), rgba(255, 64, 129, 0.2));
+    border: 1px solid var(--accent-cyan);
+    color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-family: var(--font-tech);
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.game-btn:hover {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.4);
+}

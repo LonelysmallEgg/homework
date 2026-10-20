@@ -1,0 +1,72 @@
+/* ==========================================================================
+   報導詳細內文頁面專屬 CSS 樣式
+   ========================================================================== */
+.article-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    padding: 40px;
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-glow);
+}
+
+.back-to-list-btn {
+    display: inline-block;
+    color: var(--accent-cyan);
+    font-family: var(--font-tech);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.back-to-list-btn:hover {
+    color: #fff;
+    text-shadow: 0 0 8px var(--accent-cyan);
+}
+
+.detail-meta {
+    font-family: var(--font-tech);
+    font-size: 0.95rem;
+    color: var(--accent-pink);
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.detail-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.detail-main-img {
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-glass);
+    margin-bottom: 30px;
+}
+
+.detail-main-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.detail-content {
+    color: var(--text-main);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.detail-content p {
+    margin-bottom: 20px;
+    text-align: justify;
+}

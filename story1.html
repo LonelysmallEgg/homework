@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日系遊戲官網 - 媒體報導</title>
+    <!-- 同時引入全局樣式與本頁專屬內文樣式 -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="story.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="/index.html" class="site-logo" onclick="switchPage('index')">
+            <div class="site-logo-icon">G</div>
+            <span>PROJECT</span>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="/index.html" class="nav-link" id="nav-index" onclick="switchPage('index')">首頁</a>
+            <a href="/games.html" class="nav-link" id="nav-games" onclick="switchPage('games')">遊戲</a>
+            <a href="/news.html" class="nav-link" id="nav-news" onclick="switchPage('news')">最新消息</a>
+            <a href="/help.html" class="nav-link" id="nav-help" onclick="switchPage('help')">幫助</a>
+        </nav>
+
+        <div class="header-right">
+            <form class="search-box" action="search.html" method="GET">
+                <span class="search-icon">🔍</span>
+                <input type="text" name="q" class="search-input" placeholder="搜尋位置...">
+            </form>
+            <button class="user-account-btn" onclick="window.location.href='login.html'">
+                <span>👤</span> 帳號登入
+            </button>
+        </div>
+    </header>
+
+    <main class="page-container active">
+        <div class="article-detail-container">
+            <a href="/story.html" class="back-to-list-btn" onclick="switchPage('news')">➔ 返回報導清單 BACK TO LIST</a>
+            <div class="detail-meta">2026.10.12 // PRESS RELEASE // INDUSTRY REPORT</div>
+            <h1 class="detail-title">「東京電玩展亮眼新作」CyberProject 榮獲年度最受期待獨立遊戲大獎</h1>
+            <div class="detail-main-img"><img src="/story1.jpg" alt="TGS Award Detailed"></div>
+            <div class="detail-content">
+                <p>在今年盛大舉辦的東京電玩展（Tokyo Game Show）中，由獨立開發團隊精心打造的次世代科幻動作新作《CyberProject》在數百款參展作品中脫穎而出，正式榮獲官方頒發的「年度最受期待獨立遊戲大獎」。</p>
+                <p>展會現場釋出了長達五分鐘的全新實機戰活動畫。現場評審與產業媒體一致指出，該作憑藉著極具前衛與張力的動漫霓虹美學，成功打破了傳統賽博朋克題材的視覺限制。流暢且拳拳到肉的打擊感搭配動態電音節奏，在試玩區引發了排隊狂潮，成為今年全場關注的絕對焦點。</p>
+                <p>核心開發團隊表示，本次獲獎是全球社群與所有美術、程式同仁共同努力的成果，未來將持續秉持極致追求，為玩家帶來最順暢的次世代互動介面體驗。</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="/jobchance.html" onclick="switchPage('jobchance')">工作機會</a>
+            <a href="/story.html" onclick="switchPage('story')">媒體報導</a>
+            <a href="/connect.html" onclick="switchPage('connect')">聯繫我們</a>
+            <a href="/help.html" onclick="switchPage('help')">客服支援</a>
+            <a href="/about.html" onclick="switchPage('about')">關於我們</a>
+        </div>
+        <p>© 2026 AETHERIA GAME STUDIO. ALL RIGHTS RESERVED. 本網站為個人二次元遊戲作品展示網頁範例。</p>
+    </footer>
+</body>
+
+</html>

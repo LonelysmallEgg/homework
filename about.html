@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們 - 日系遊戲官網</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="site-logo">
+            <div class="site-logo-icon">G</div>
+            <span>PROJECT</span>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link" id="nav-index">首頁</a>
+            <a href="games.html" class="nav-link" id="nav-games">遊戲</a>
+            <a href="news.html" class="nav-link" id="nav-news">最新消息</a>
+            <a href="help.html" class="nav-link" id="nav-help">幫助</a>
+        </nav>
+
+        <div class="header-right">
+            <form class="search-box" action="search.html" method="GET">
+                <span class="search-icon">🔍</span>
+                <input type="text" name="q" class="search-input" placeholder="搜尋位置...">
+            </form>
+            <button class="user-account-btn" onclick="window.location.href='login.html'">
+                <span>👤</span> 帳號登入
+            </button>
+        </div>
+    </header>
+
+    <main class="page-container active">
+        <div class="about-inner">
+            
+            <div class="about-hero">
+                <h1 class="page-title">打造幻想與感動的二次元世界</h1>
+                <span class="about-hero-tag">Creating Unforgettable Virtual Worlds</span>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">1,500,000,000+</div>
+                    <div class="stat-label">全球註冊玩家</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6+</div>
+                    <div class="stat-label">營運與開發遊戲作品</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4.9★</div>
+                    <div class="stat-label">玩家綜合好評率</div>
+                </div>
+            </div>
+
+            <section class="about-section">
+                <h2 class="about-section-title">品牌理念 <span>BRAND VISION</span></h2>
+                <p class="about-text">
+                    PROJECT 成立於 2022 年，團隊由一群熱愛日系 ACG 文化的創作者與技術專家所組成。我們的核心宗旨是「以匠人精神打造極致的沉浸式冒險」。<br><br>
+                    從細緻的角色美術立繪、宏大的世界觀設定，到流暢打擊感的動作體驗，我們致力於為每一位玩家帶來跨越現實與虛擬的感動時刻。
+                </p>
+            </section>
+
+            <section class="about-section">
+                <h2 class="about-section-title">發展歷程 <span>HISTORY & MILESTONE</span></h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026.10</div>
+                        <h3 class="timeline-title">全球二次創作繪圖大賽順利落幕</h3>
+                        <p class="timeline-desc">收錄超過萬件玩家作品，獲得社群熱烈迴響。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026.03</div>
+                        <h3 class="timeline-title">開放世界巨作《蒼穹之軌跡》尚未上線</h3>
+                        <p class="timeline-desc">上線首日即突破 50 萬預購量，榮登多國免費榜榜首。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024.12</div>
+                        <h3 class="timeline-title">工作室成立與研發引擎升級</h3>
+                        <p class="timeline-desc">全面引進次世代渲染技術，深耕二次元遊戲開發。</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="/jobchance.html" onclick="switchPage('jobchance')">工作機會</a>
+            <a href="/story.html" onclick="switchPage('story')">媒體報導</a>
+            <a href="/connect.html" onclick="switchPage('connect')">聯繫我們</a>
+            <a href="/help.html" onclick="switchPage('help')">客服支援</a>
+            <a href="/about.html" onclick="switchPage('about')">關於我們</a>
+        </div>
+        <p>© 2026 AETHERIA GAME STUDIO. ALL RIGHTS RESERVED. 本網站為個人二次元遊戲作品展示網頁範例。</p>
+    </footer>
+
+</body>
+</html>

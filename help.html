@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幫助與常見問題 - 日系遊戲官網</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="help.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="site-logo">
+            <div class="site-logo-icon">G</div>
+            <span>PROJECT</span>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link" id="nav-index">首頁</a>
+            <a href="games.html" class="nav-link" id="nav-games">遊戲</a>
+            <a href="news.html" class="nav-link" id="nav-news">最新消息</a>
+            <a href="help.html" class="nav-link active" id="nav-help">幫助</a>
+        </nav>
+
+        <div class="header-right">
+            <form class="search-box" action="search.html" method="GET">
+                <span class="search-icon">🔍</span>
+                <input type="text" name="q" class="search-input" placeholder="搜尋位置...">
+            </form>
+            <button class="user-account-btn" onclick="window.location.href='login.html'">
+                <span>👤</span> 帳號登入
+            </button>
+        </div>
+    </header>
+
+    <main class="page-container active">
+        <div class="help-inner">
+            <h1 class="page-title">幫助與常見問題 HELP CENTER & FAQ</h1>
+            
+            <div class="category-nav">
+                <button class="category-tab" onclick="alert('未開放')">帳號與安全 →</button>
+                <button class="category-tab" onclick="alert('未開放')">充值與商城 →</button>
+                <button class="category-tab" onclick="alert('未開放')">遊戲崩潰與相容性 →</button>
+                <button class="category-tab" onclick="alert('未開放')">遊戲玩法規則 →</button>
+                <button class="category-tab" onclick="alert('未開放')">檢舉與申訴 →</button>
+            </div>
+
+            <div class="faq-list">
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: 如何綁定與保護我的遊戲帳號？</div>
+                    <div class="faq-answer">
+                        您可以在登入後進入「個人帳號中心」，選擇綁定電子郵件或啟用雙重驗證 (2FA)，這樣能有效保障您的帳號與虛擬資產安全。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 更換手機或跨平台裝置資料會同步嗎？</div>
+                    <div class="faq-answer">
+                        是的，只要您使用相同的官方帳號進行登入，不論是 iOS、Android 或是 PC 版的遊戲進度與購買紀錄皆為實時同步。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 忘記密碼或帳號遭盜用該如何處置？</div>
+                    <div class="faq-answer">
+                        請在登入頁面點擊「忘記密碼」並使用綁定之信箱重設密碼。若疑遭盜用，請立即聯繫線上客服並提供近期儲值訂單紀錄進行認證鎖定。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 體驗帳號（訪客帳號）該如何升級為正式帳號？</div>
+                    <div class="faq-answer">
+                        請開啟遊戲內「設定」->「帳號中心」，點擊「綁定帳號」，輸入常用的 E-mail 與設定密碼即可將訪客進度完整轉移。
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="/jobchance.html" onclick="switchPage('jobchance')">工作機會</a>
+            <a href="/story.html" onclick="switchPage('story')">媒體報導</a>
+            <a href="/connect.html" onclick="switchPage('connect')">聯繫我們</a>
+            <a href="/help.html" onclick="switchPage('help')">客服支援</a>
+            <a href="/about.html" onclick="switchPage('about')">關於我們</a>
+        </div>
+        <p>© 2026 AETHERIA GAME STUDIO. ALL RIGHTS RESERVED. 本網站為個人二次元遊戲作品展示網頁範例。</p>
+    </footer>
+
+</body>
+</html>

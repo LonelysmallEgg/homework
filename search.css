@@ -1,0 +1,45 @@
+/* ==========================================================================
+   搜尋結果頁面排版
+   ========================================================================== */
+.search-inner {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.search-title-main {
+    font-family: var(--font-tech);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.search-subtitle {
+    font-family: var(--font-tech);
+    font-size: 0.95rem;
+    color: var(--accent-pink);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    display: block;
+}
+
+.search-empty-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+    padding: 60px 40px;
+    backdrop-filter: blur(12px);
+}
+
+.search-empty-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.search-empty-text {
+    color: var(--text-sub);
+    font-size: 1.1rem;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日系遊戲官網 - INDEX</title>
+    <!-- 同時引入全局樣式與本頁專屬清單樣式 -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="press.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="/index.html" class="site-logo" onclick="switchPage('index')">
+            <div class="site-logo-icon">G</div>
+            <span>PROJECT</span>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="/index.html" class="nav-link" id="nav-index" onclick="switchPage('index')">首頁</a>
+            <a href="/games.html" class="nav-link" id="nav-games" onclick="switchPage('games')">遊戲</a>
+            <a href="/news.html" class="nav-link" id="nav-news" onclick="switchPage('news')">最新消息</a>
+            <a href="/help.html" class="nav-link" id="nav-help" onclick="switchPage('help')">幫助</a>
+        </nav>
+
+        <div class="header-right">
+            <form class="search-box" action="search.html" method="GET">
+                <span class="search-icon">🔍</span>
+                <input type="text" name="q" class="search-input" placeholder="搜尋位置...">
+            </form>
+            <button class="user-account-btn" onclick="window.location.href='login.html'">
+                <span>👤</span> 帳號登入
+            </button>
+        </div>
+    </header>
+
+    <main class="page-container active">
+        <div class="press-inner">
+            <h1 class="page-title">Press Coverage // 媒體報導</h1>
+            <div class="press-grid">
+                
+                <!-- 報導項目 1 -->
+                <article class="press-card">
+                    <div class="press-thumb"><img src="/story1.jpg" alt="TGS Award"></div>
+                    <div class="press-content">
+                        <div class="press-date">2026.10.12 // PRESS RELEASE</div>
+                        <h2 class="press-headline">「東京電玩展亮眼新作」CyberProject 榮獲年度最受期待獨立遊戲大獎</h2>
+                        <p class="press-summary">今日於東京電玩展上，官方釋出了最新實機戰活動畫，憑藉前衛的視覺美學打破傳統限制，成功斬獲全場焦點與多項大獎提名。</p>
+                        <!-- 連結已精準指向獨立的 story1.html 頁面 -->
+                        <a href="story1.html" class="read-more-btn">觀看全文 ➔</a>
+                    </div>
+                </article>
+
+                <!-- 報導項目 2 -->
+                <article class="press-card">
+                    <div class="press-thumb"><img src="/story2.jpg" alt="Interview"></div>
+                    <div class="press-content">
+                        <div class="press-date">2026.09.28 // MEDIA INTERVIEW</div>
+                        <h2 class="press-headline">專訪核心開發團隊：如何用動漫霓虹美學重新定義賽博朋克世界觀？</h2>
+                        <p class="press-summary">遊戲基地（GameBase）專訪團隊美術總監，深入探討音樂、色彩、與賽博龐克文化的交叉融合，揭秘背後的創作核心與理念。</p>
+                        <!-- 連結已精準指向獨立的 story2.html 頁面 -->
+                        <a href="story2.html" class="read-more-btn">觀看全文 ➔</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="/jobchance.html" onclick="switchPage('jobchance')">工作機會</a>
+            <a href="/story.html" onclick="switchPage('story')">媒體報導</a>
+            <a href="/connect.html" onclick="switchPage('connect')">聯繫我們</a>
+            <a href="/help.html" onclick="switchPage('help')">客服支援</a>
+            <a href="/about.html" onclick="switchPage('about')">關於我們</a>
+        </div>
+        <p>© 2026 AETHERIA GAME STUDIO. ALL RIGHTS RESERVED. 本網站為個人二次元遊戲作品展示網頁範例。</p>
+    </footer>
+</body>
+
+</html>

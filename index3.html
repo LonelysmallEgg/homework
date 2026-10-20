@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日系遊戲官網 - 最新消息</title>
+    <!-- 引入全域樣式與內文專屬樣式 -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="story.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="site-logo">
+            <div class="site-logo-icon">G</div>
+            <span>PROJECT</span>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link" id="nav-index">首頁</a>
+            <a href="games.html" class="nav-link" id="nav-games">遊戲</a>
+            <a href="news.html" class="nav-link" id="nav-news">最新消息</a>
+            <a href="help.html" class="nav-link" id="nav-help">幫助</a>
+        </nav>
+
+        <div class="header-right">
+            <form class="search-box" action="search.html" method="GET">
+                <span class="search-icon">🔍</span>
+                <input type="text" name="q" class="search-input" placeholder="搜尋位置...">
+            </form>
+            <button class="user-account-btn" onclick="window.location.href='login.html'">
+                <span>👤</span> 帳號登入
+            </button>
+        </div>
+    </header>
+
+    <main class="page-container active">
+        <div class="article-detail-container">
+            <a href="index.html" class="back-to-list-btn">➔ 返回首頁 BACK TO HOME</a>
+            <div class="detail-meta">2026.09.28 // COMMUNITY EVENT // ART WINNERS</div>
+            <h1 class="detail-title">全球二次創作繪圖大賽結果重磅揭曉</h1>
+            <div class="detail-main-img"><img src="index3.jpg" alt="Contest Winners Detailed"></div>
+            <div class="detail-content">
+                <p>感謝全球創作好手的熱烈支持！</p>
+                <p>歷時數月的 PROJECT 全球同人二次創作二次創作大賽於今日完美落下帷幕。本次活動收到了來自全球各地繪師超過上萬件極高品質的投稿作品，投稿總量與藝術層次皆創下了工作室創立以來的最高歷史紀錄。</p>
+                <p>經過核心美術總監及研發評審團的嚴格評選，最終獲獎名單現已重磅公告。恭喜所有脫穎而出的首獎獲得者！官方除了發放高額創作獎金外，這些精選的作品也將在下個系統封包更新後，被永久收錄至遊戲內的官方精裝電子紀念圖鑑中，供全體冒險者自由鑑賞。</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="/jobchance.html" onclick="switchPage('jobchance')">工作機會</a>
+            <a href="/story.html" onclick="switchPage('story')">媒體報導</a>
+            <a href="/connect.html" onclick="switchPage('connect')">聯繫我們</a>
+            <a href="/help.html" onclick="switchPage('help')">客服支援</a>
+            <a href="/about.html" onclick="switchPage('about')">關於我們</a>
+        </div>
+        <p>© 2026 AETHERIA GAME STUDIO. ALL RIGHTS RESERVED. 本網站為個人二次元遊戲作品展示網頁範例。</p>
+    </footer>
+
+</body>
+
+</html>

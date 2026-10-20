@@ -1,0 +1,78 @@
+/* ==========================================================================
+   幫助中心專屬排版與原生網頁點擊樣式
+   ========================================================================== */
+.help-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.category-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.category-tab {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glass);
+    color: var(--text-main);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-family: var(--font-tech);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-tab:hover {
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+    color: #fff;
+    user-select: none;
+}
+
+.faq-question::after {
+    content: '▼';
+    font-size: 0.8rem;
+    color: var(--accent-cyan);
+}
+
+.faq-item:hover {
+    border-color: var(--border-cyan);
+}
+
+.faq-answer {
+    padding: 20px 25px;
+    color: var(--text-sub);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    border-top: 1px solid var(--border-glass);
+    background: rgba(0, 0, 0, 0.15);
+}
